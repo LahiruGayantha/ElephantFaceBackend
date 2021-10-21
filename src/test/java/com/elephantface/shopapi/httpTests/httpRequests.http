@@ -1,0 +1,86 @@
+GET {{URL}}/item/find/3
+Accept: application/json
+
+###
+GET {{URL}}/item/all
+Accept: application/json
+
+###
+GET {{URL}}/item/findByUser/23
+Accept: application/json
+
+###
+POST {{URL}}/item/add
+Content-Type: application/json
+
+{
+  "name": "Men's T-Shirt",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+  "unitPrice": 1250.00,
+  "image": "https://static.fibre2fashion.com/MemberResources/LeadResources/1/2017/9/Seller/17133153/Images/17133153_0_men-s-t-shirt.jpg",
+  "ownerId":23
+}
+
+###
+PUT {{URL}}/item/update/22
+Content-Type: application/json
+
+{
+  "name": "T-Shirt",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
+  "unitPrice": 1250.00,
+  "image": "https://static.fibre2fashion.com/MemberResources/LeadResources/1/2017/9/Seller/17133153/Images/17133153_0_men-s-t-shirt.jpg",
+  "ownerId":23
+}
+
+###
+GET {{URL}}/user/all
+Accept: application/json
+
+
+###
+POST {{URL}}/auth/authentication
+Content-Type: application/json
+
+{
+  "email": "lahiru",
+  "password": "lahiru"
+}
+
+###
+POST {{URL}}/cart/addItem
+Content-Type: application/json
+
+{
+  "itemId": 3,
+  "itemQty":3,
+  "userId":1
+}
+
+###
+POST {{URL}}/user/add
+Content-Type: application/json
+
+{
+  "firstName":"Chamal",
+  "lastName":"Silva",
+  "email":"Chamal",
+  "password":"Chamal",
+  "type": "seller"
+}
+
+###
+DELETE {{URL}}/cart/delete/10
+
+###
+DELETE {{URL}}/item/delete/24
+
+###
+PUT {{URL}}/cart/update/13
+Content-Type: application/json
+
+{
+  "itemId": 3,
+  "itemQty":3,
+  "userId":1
+}
